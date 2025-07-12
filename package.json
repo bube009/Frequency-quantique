@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ionic": "^5.4.16",
+    "serve": "^14.2.4"
+  }
+}
