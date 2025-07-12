@@ -1,1 +1,6 @@
-
+{
+  "appId": "com.frequency.quantique",
+  "appName": "Frequency Quantique",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
