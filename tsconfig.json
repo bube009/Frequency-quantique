@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "./dist/out-tsc",
+    "types": []
+  },
+  "exclude": ["node_modules", "tmp"]
+}
