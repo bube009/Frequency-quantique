@@ -1,6 +1,5 @@
 {"scripts": {,
-  "build": "ng build"
-},
+  "build": "ng build",
   "name": "frequency-quantique",
   "version": "1.0.0",
   "private": true,
