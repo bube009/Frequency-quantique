@@ -1,4 +1,6 @@
-{
+}
+{"scripts": {
+  "preinstall": "npx npm@9 install --legacy-peer-deps
   "name": "frequency-quantique",
   "version": "1.0.0",
   "private": true,
