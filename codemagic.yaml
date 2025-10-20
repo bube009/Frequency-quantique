@@ -1,0 +1,29 @@
+workflows:
+  ionic-capacitor:
+    name: Build Ionic Capacitor App
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        NODE_VERSION: 18
+      node: $NODE_VERSION
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install -g @ionic/cli
+          npm ci
+      - name: Build Ionic app
+        script: |
+          ionic build
+      - name: Sync Capacitor platforms
+        script: |
+          npx cap sync
+      - name: Build Android release
+        script: |
+          cd android
+          ./gradlew assembleRelease
+    artifacts:
+      - android/app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - $CM_EMAIL
