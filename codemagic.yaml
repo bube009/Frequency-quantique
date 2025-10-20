@@ -6,7 +6,6 @@ workflows:
       vars:
         NODE_VERSION: 18
       node: $NODE_VERSION
-      npm_cache: true
     scripts:
       - name: Clean and install dependencies
         script: |
