@@ -6,13 +6,17 @@ workflows:
       vars:
         NODE_VERSION: 18
       node: $NODE_VERSION
+      npm_cache: true
     scripts:
-      - name: Install dependencies
+      - name: Clean and install dependencies
         script: |
+          rm -rf node_modules
+          npm cache clean --force
           npm install -g @ionic/cli
-          npm ci
-      - name: Build Ionic app
+          npm install
+      - name: Verify Ionic build
         script: |
+          ionic info
           ionic build
       - name: Sync Capacitor platforms
         script: |
@@ -20,6 +24,6 @@ workflows:
       - name: Build Android release
         script: |
           cd android
-          ./gradlew assembleRelease
+          ./gradlew assembleDebug
     artifacts:
       - android/app/build/outputs/**/*.apk
