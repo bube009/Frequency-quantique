@@ -1,8 +1,8 @@
-{"scripts": {
-  "build": "ng build"
+{"scripts": {,
+  "build": "ng build",
   "name": "frequency-quantique",
   "version": "1.0.0",
-  "private": true,
+  "private": true
   "dependencies": {
     "@angular/animations": "15.2.10",
     "@angular/common": "15.2.10",
