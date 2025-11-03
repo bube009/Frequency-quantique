@@ -1,32 +1,37 @@
-{"scripts": {,
-  "build": "ng build",
+{
   "name": "frequency-quantique",
-  "version": "1.0.0",
-  "private": true
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync": "vite build && npx cap sync",
+    "ios": "npm run sync && npx cap open ios",
+    "android": "npm run sync && npx cap open android"
+  },
   "dependencies": {
-    "@angular/animations": "15.2.10",
-    "@angular/common": "15.2.10",
-    "@angular/compiler": "15.2.10",
-    "@angular/core": "15.2.10",
-    "@angular/forms": "15.2.10",
-    "@angular/platform-browser": "15.2.10",
-    "@angular/platform-browser-dynamic": "15.2.10",
-    "@angular/router": "15.2.10",
-    "rxjs": "7.8.1",
-    "tslib": "2.5.3",
-    "zone.js": "0.12.0"
+    "@capacitor/app": "^6.1.0",
+    "@capacitor/camera": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/dialog": "^6.1.0",
+    "@capacitor/device": "^6.1.0",
+    "@capacitor/filesystem": "^6.1.0",
+    "@capacitor/haptics": "^6.1.0",
+    "@capacitor/live-updates": "^6.1.0",
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "@capacitor-community/bluetooth-le": "^8.0.1",
+    "@ionic/vue": "^8.2.6",
+    "@ionic/vue-router": "^8.2.6",
+    "ionicons": "^7.2.2",
+    "vue": "^3.5.12"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "15.2.10",
-    "@angular/cli": "15.2.10",
-    "@angular/compiler-cli": "15.2.10",
-    "@types/jasmine": "4.3.1",
-    "jasmine-core": "4.5.0",
-    "karma": "6.4.2",
-    "karma-chrome-launcher": "3.1.1",
-    "karma-coverage": "2.2.0",
-    "karma-jasmine": "5.1.0",
-    "karma-jasmine-html-reporter": "2.0.0",
-    "typescript": "4.9.5"
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
   }
 }
+
